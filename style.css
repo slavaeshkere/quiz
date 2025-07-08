@@ -1,0 +1,144 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #0f52ba, #1e3c72);
+    margin: 0;
+}
+
+.quiz-wrapper {
+    width: 100%;
+    max-width: 400px;
+}
+
+.quiz-box, .result-box, .start-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+button {
+    background: linear-gradient(to right, #43cea2, #185a9d);
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.hidden {
+    display: none;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #ffa200, #FF2525);
+    transition: width 0.5s ease-in-out;
+}
+
+.bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #555;
+}
+
+#result-container p {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.start-box h2 {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.start-box p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+#start-button {
+    background: linear-gradient(to right, #43cea2, #185a9d);
+
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.start-box {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+#start-button {
+    animation: pulse 2s infinite;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    font-size: 18px;
+    padding: 14px 24px;
+    border-radius: 10px;
+}
+
+#start-button:hover {
+    transform: scale(1.08);
+    opacity: 0.95;
+}
