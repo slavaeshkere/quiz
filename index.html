@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квіз</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-dots"></div>
+    <div class="quiz-wrapper">
+        <!-- Лоббі -->
+        <div id="start-container" class="start-box">
+            <h2>🎮 Готові до квізу?</h2>
+            <p>Перевірте свої знання у різних категоріях!</p>
+            <button id="start-button">▶️ Почати гру</button>
+        </div>
+
+        <!-- Гра -->
+        <div id="quiz-container" class="quiz-box hidden">
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+            <h2 id="question">Запитання</h2>
+            <p id="category" class="category"></p>
+            <div id="answers" class="answers"></div>
+            <div class="bottom-bar">
+                <p id="timer">⏳ <span id="time">15</span> сек</p>
+                <p id="question-counter">1 / 5</p>
+            </div>
+        </div>
+
+        <!-- Результати -->
+        <div id="result-container" class="result-box hidden">
+            <h2>Гра завершена!</h2>
+            <p>Ваш результат: <span id="score"></span> з <span id="total"></span></p>
+            <p>Середній час на 1 запитання: <span id="avg-time"></span> сек</p>
+            <p>Відсоток відповідей: <span id="accuracy"></span>%</p>
+            <button id="restart">🔄 Грати знову</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
